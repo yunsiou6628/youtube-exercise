@@ -1,0 +1,564 @@
+/* 設定文字樣式 */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* -- header 最上層 01 ------------------------------------------------------------------------- */
+
+#header {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    /* background: lightblue; */
+
+    position: fixed;
+    top: 0;
+}
+
+.menu_list {
+    float: left;
+    line-height: 40px;
+    padding: 0px 20px;
+    cursor: pointer;
+    /* background: rgb(242, 0, 255); */
+}
+
+.menu_list a {
+    font-size: 15px;
+    color: black;
+}
+
+.logo {
+    float: left;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 40px;
+    padding: 0px 20px;
+    /* background: blue; */
+}
+
+.search {
+    position: absolute;
+    line-height: 40px;
+    left: 40%;
+}
+
+.search input {
+    width: 300px;
+    height: 30px;
+    display: inline-block;
+    box-sizing: border-box;
+    /* background: rgb(242, 0, 255); */
+}
+
+.search button {
+    height: 30px;
+    cursor: pointer;
+    /* background: blue; */
+}
+
+.voice_search {
+    line-height: 40px;
+    padding: 0px 20px;
+    display: inline-block;
+    cursor: pointer;
+    /* background: blue; */
+}
+
+#right {
+    float: right;
+}
+
+.application {
+    float: left;
+    padding: 0px 20px;
+    line-height: 40px;
+    cursor: pointer;
+    /* background: blue; */
+}
+
+.application img {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.setup {
+    float: left;
+    padding: 0px 20px;
+    line-height: 40px;
+    cursor: pointer;
+    /* background: blue; */
+}
+
+
+.setup a {
+    font-size: 15px;
+    color: black;
+}
+
+.login {
+    float: left;
+    line-height: 40px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.login img {
+    height: 40px;
+    padding: 0px 10px;
+    /* background: rgb(242, 0, 255); */
+}
+
+
+/* -- leftmenu 左邊選單區 02 -------------------------------------------------------------------  */
+
+
+#leftmenu {
+    width: 240px;
+    height: calc(100% - 56px);
+    /* 沒有設定 overflow ，會直接被裁切成頁面大小 */
+    overflow-x: hidden;
+    display: block;
+    position: fixed;
+    top: 56px;
+}
+
+/* -- leftmenu01-item ------------------------*/
+
+.leftmenu01-item {
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.leftmenu01-item:hover {
+    background: rgb(238, 238, 238);
+}
+
+.leftmenu01-item a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    font-weight: 300;
+}
+
+.leftmenu01-item i {
+    padding: 0px 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.leftmenu01-item:nth-child(5) {
+    border-top: 1px solid #ddd;
+}
+
+.leftmenu01-item:nth-child(6) {
+    border-bottom: 1px solid #ddd;
+}
+
+.leftmenu01-2-item {
+    line-height: 20px;
+    padding: 15px 25px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: black;
+    font-weight: 300;
+}
+
+.leftmenu01-2-item span {
+    padding-bottom: 15px;
+    display: block;
+}
+
+.leftmenu01-2-item img {
+    height: 40px;
+    /* vertical-align: middle;消除幽靈空白 */
+    vertical-align: middle;
+}
+
+/* -- leftmenu02-item ------------------------*/
+
+.leftmenu02-1-item {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px 25px;
+    color: rgb(80, 80, 80);
+}
+
+.leftmenu02-item {
+    width: 240px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.leftmenu02-item:hover {
+    background: rgb(238, 238, 238);
+}
+
+.leftmenu02-item a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    font-weight: 300;
+    display: block;
+}
+
+.leftmenu02-item img {
+    border-radius: 50%;
+    width: 25px;
+    padding: 0 20px;
+    /* line-height: 40px; */
+    display: inline-block;
+    vertical-align: middle;
+    /* 設定 line-height 無效 / vertical-align: middle; 有效，但會往下跑，無法置中 */
+}
+
+.leftmenu02-item span {
+    vertical-align: -3px;
+}
+
+.leftmenu02-item i {
+    width: 25px;
+    /* line-height: 40px; */
+    padding: 0px 20px;
+    font-size: 18px;
+}
+
+.leftmenu02 li:nth-child(8) {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* -- leftmenu03-item ------------------------*/
+
+.leftmenu03-1-item {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px 25px;
+    color: rgb(80, 80, 80);
+}
+
+.leftmenu03-item {
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.leftmenu03-item:hover {
+    background: rgb(238, 238, 238);
+}
+
+.leftmenu03-item a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    font-weight: 300;
+}
+
+.leftmenu03-item i {
+    padding: 0px 20px;
+    font-size: 18px;
+}
+
+.leftmenu03-item:nth-child(2) {
+    border-bottom: 1px solid #ddd;
+}
+
+.leftmenu03-item:nth-child(6) {
+    border-bottom: 1px solid #ddd;
+}
+
+/* -- leftmenu04-item ------------------------*/
+
+/* 直接使用.leftmenu04 和  .leftmenu04 ul 設定 padding 和寬高都無效 */
+/* .leftmenu04 ul{
+    width: 200px;
+    height: 200px;
+    padding: 100px;
+    background: blueviolet;
+} */
+
+.leftmenu04-item {
+    line-height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    /* padding-left: 5px; */
+}
+
+.leftmenu04-item:nth-child(1) {
+    padding-left: 20px;
+    padding-top: 10px;
+    /* background: lightblue; */
+}
+
+.leftmenu04-item:nth-child(6) {
+    padding-left: 20px;
+    /* background: lightgreen; */
+}
+
+.leftmenu04-item:nth-child(10) {
+    padding-left: 20px;
+    padding-top: 10px;
+    /* background: lightsalmon; */
+}
+
+.leftmenu04-item:nth-child(14) {
+    padding-left: 20px;
+    /* background: lightgreen; */
+}
+
+.leftmenu04-item a {
+    display: inline;
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(27, 27, 27);
+    font-weight: 300;
+}
+
+/* -- footer / copyright 結尾 / 版權 ----------*/
+
+#footer {
+    font-size: 12px;
+    color: grey;
+    padding: 20px;
+}
+
+/* 捲軸底色 */
+.style1::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+/* 捲軸寬度 */
+.style1::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* 捲軸本體顏色 */
+.style1::-webkit-scrollbar-thumb {
+    background-color: #ffffff00;
+    border-radius: 40px 40px;
+}
+
+.style1::-webkit-scrollbar-thumb:hover {
+    background-color: #959595;
+    border-radius: 40px 40px;
+}
+
+
+/* -- 影片種類區 03 ----------------------------------------------------------------------------- */
+
+#type_of_video {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    /* background: lightseagreen; */
+    text-align: center;
+
+    position: fixed;
+    top: 56px;
+    left: 240px;
+}
+
+#type_of_video ul li {
+    display: inline-block;
+    padding: 0px 5px;
+    line-height: 56px;
+    cursor: pointer;
+}
+
+#type_of_video ul li a {
+    padding: 5px 12px;
+    background: rgb(238, 238, 238);
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 40px 40px;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+#type_of_video ul li:nth-child(1) a {
+    background: black;
+    color: white;
+    font-weight: 300;
+}
+
+
+/* -- 影片區 04 -------------------------------------------------------------------------------- */
+
+/* 捲軸底色 */
+.style2::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+/* 捲軸寬度 */
+.style2::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* 捲軸本體顏色 */
+.style2::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    border-radius: 40px 40px;
+}
+
+.style1::-webkit-scrollbar-thumb:hover {
+    background-color: #a2a2a2;
+    border-radius: 40px 40px;
+}
+
+#video_area {
+    width: calc(100% - 240px);
+    height: calc(100% - 112px);
+    background: rgb(248, 248, 248);
+    overflow-x: hidden;
+    cursor: pointer;
+    border-top: 1px solid #ddd;
+
+    position: fixed;
+    top: 112px;
+    left: 240px;
+}
+
+#video_area .row {
+    padding: 15px;
+}
+
+#video_area .col {
+    width: 25%;
+    /* box-sizing: border-box; 會將所有 card 尺寸做計算 #video_area .card就不需要設定寬 */
+    box-sizing: border-box;
+    padding: 0.3rem;
+    float: left;
+}
+
+#video_area .card {
+    height: 300px;
+    transition: 0s;
+    position: relative;
+}
+
+#video_area .card:hover {
+    height: 300px;
+    transform: translate(0px, 20px) scale(1.2);
+    transition-delay: 1s;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    z-index: 1;
+}
+
+#video_area #c1:hover {
+    height: 300px;
+    /* 若把比例設上下區塊一樣 ，設定 height: 340px; h3會往下掉 */
+    transform: translate(20px, 20px) scale(1.2);
+    transition-delay: 1s;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    z-index: 1;
+}
+
+#video_area #c4:hover {
+    transform: translate(-20px, 20px) scale(1.2);
+    transition-delay: 1s;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    z-index: 1;
+}
+
+#video_area #c5:hover {
+    transform: translate(20px, 20px) scale(1.2);
+    transition-delay: 1s;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    z-index: 1;
+}
+
+#video_area #c8:hover {
+    transform: translate(-20px, 20px) scale(1.2);
+    transition-delay: 1s;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    z-index: 1;
+}
+
+#video_area #c9:hover {
+    transform: translate(20px, 20px) scale(1.2);
+    transition-delay: 1s;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    z-index: 1;
+}
+
+#video_area #c12:hover {
+    transform: translate(-20px, 20px) scale(1.2);
+    transition-delay: 1s;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    z-index: 1;
+}
+
+#video_area #c13:hover {
+    transform: translate(20px, 20px) scale(1.2);
+    transition-delay: 1s;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    z-index: 1;
+}
+
+.card-header img {
+    width: 100%;
+    height: 170px;
+}
+
+.card-body {
+    padding: 15px 15px;
+}
+
+.card-body img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.card-body h3 {
+    padding: 0px 12px;
+    display: inline-block;
+    /* background: lightpink; */
+    position: absolute;
+    top: 60%;
+    left: 62px;
+    line-height: 25px;
+    font-weight: 300;
+    font-size: 16px;
+    color: black;
+
+    /* 保留所有空白，自動換行。 */
+    white-space: pre-wrap;
+}
+
+.card-body p {
+    padding: 0px 28px;
+    /* background: lightblue; */
+    position: absolute;
+    top: 80%;
+    left: 48px;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgb(131, 131, 131);
+}
+
+.card-body p a {
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(131, 131, 131);
+}

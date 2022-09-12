@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube</title>
+    <!-- reset -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- font awesome 解壓縮後 css 目錄複製 all.min.css 或 all.css 與整個 webfonts 字型目錄-->
+    <link rel="stylesheet" href="./css/all.css">
+    <!-- ./webfonts/  => font awesome  -->
+    <link rel="stylesheet" href="./webfonts/">
+    <!-- youtube 作業樣式 -->
+    <link rel="stylesheet" href="./css/youtube_style.css">
+    <!-- Google Font -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap">
+
+</head>
+
+<body>
+
+    <!-- 
+    # Youtube 切版
+    - ctrl + n 進入無痕模式到 youtube
+    - 使用 display:inline-block、float 流動排版
+    - 使用 position 固定定位設計左側選單
+    - 使用 FontAwsome 設定 icon
+    - 使用 Google Font 設定字型
+    -->
+
+    <!-- header 最上層 01 ------------------------------------------------------------------- -->
+    <div id="header">
+        <div class="container">
+
+            <!-- menu_list 選單列表 -->
+            <div class="menu_list"><a href="#">
+                    <!-- font awesome 樣式標籤連結 -->
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+
+            <!-- logo -->
+            <div class="logo"><a href="#">
+                    <img src="./images/youtube_logo.jpg" alt="newyoutube" title="newyoutube"></a>
+            </div>
+
+            <!-- search 搜尋 -->
+            <div class="search">
+                <!-- 文字輸入欄位 + 按鈕搜尋 -->
+                <input type="text">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                <!-- voice_search 使用語音搜尋 -->
+                <div class="voice_search">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+
+
+            <!-- 排列順序:包一層div設定float: right; 裡面順序可不換，重疊正常 -->
+            <div id="right">
+                <!--  application 應用程式  -->
+                <div class="application"><a href="#">
+                        <img src="./images/application.png" alt="application" title="application"></a>
+                </div>
+
+                <!-- setup 設定  -->
+                <div class="setup"><a href="#">
+                        <i class="fa-solid fa-ellipsis-vertical"></i></a>
+                </div>
+
+                <!--  account login 帳戶登入  -->
+                <div class="login"><a href="#">
+                        <img src="./images/login.png" alt="login" title="login"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- leftmenu 左邊選單區 02 ------------------------------------------------------------------- -->
+    <div id="leftmenu" class="style1">
+        <div class="container">
+
+            <!-- 第一區塊 - 目錄 -->
+            <table class="leftmenu01">
+                <ul>
+                    <li class="leftmenu01-item"><a href="#"><i class="fa-solid fa-house"></i>首頁</a></li>
+                    <li class="leftmenu01-item"><a href="#"><i class="fa-regular fa-compass"></i> 探索</a></li>
+                    <li class="leftmenu01-item"><a href="#"><i class="fa-brands fa-chromecast"></i>Shorts</a></li>
+                    <li class="leftmenu01-item"><a href="#"><i class="fa-solid fa-outdent"></i>訂閱內容</a></li>
+                    <li class="leftmenu01-item"><a href="#"><i class="fa-regular fa-square-caret-right"></i>媒體庫</a></li>
+                    <li class="leftmenu01-item"><a href="#"><i class="fa-solid fa-clock-rotate-left"></i>觀看紀錄</a></li>
+                </ul>
+
+                <ul class="leftmenu01-2">
+                    <li class="leftmenu01-2-item"><span>登入帳戶即可對影片表示喜<br>歡、發布留言及訂閱頻道。</span><a href="#"><img
+                                src="./images/login.png"></a></li>
+                    <!-- 幽靈空白3px => 設定 vertical-align:middle / top 可以消除-->
+                </ul>
+            </table>
+
+            <!-- 第二區塊 - YOUTUBE 精選 -->
+            <table>
+                <ul class="leftmenu02-1">
+                    <li class="leftmenu02-1-item">YOUTUBE 精選</li>
+                </ul>
+
+                <ul class="leftmenu02">
+                    <li class="leftmenu02-item"><a href="#"><img src="./images/channels1_profile.jpg" alt=""
+                                title=""><span>音樂</span></a></li>
+                    <li class="leftmenu02-item"><a href="#"><img src="./images/channels2_profile.jpg" alt=""
+                                title=""><span>體育</span></a></li>
+                    <li class="leftmenu02-item"><a href="#"><img src="./images/channels3_profile.jpg" alt=""
+                                title=""><span>遊戲</span></a></li>
+                    <li class="leftmenu02-item"><a href="#"><img src="./images/channels4_profile.jpg" alt=""
+                                title=""><span>電影</span></a></li>
+                    <li class="leftmenu02-item"><a href="#"><img src="./images/channels5_profile.jpg" alt=""
+                                title=""><span>新聞</span></a></li>
+                    <li class="leftmenu02-item"><a href="#"><img src="./images/channels6_profile.jpg" alt=""
+                                title=""><span>直播</span></a></li>
+                    <li class="leftmenu02-item"><a href="#"><img src="./images/channels7_profile .jpg" alt=""
+                                title=""><span>360度影片</span></a></li>
+                    <li class="leftmenu02-item"><a href="#"><i class="fa-solid fa-circle-plus"></i>瀏覽頻道</a></li>
+                    <!-- 盡量不要讓文字沒被包住，會無法和物件對齊，可用<span>多包一層，同時設定圖片和文字垂直置中 .leftmenu02-item span {vertical-align: -2px;}-->
+                </ul>
+            </table>
+
+            <!-- 第三區塊 - 更多 YOUTUBE 功能 -->
+            <table>
+                <ul class="leftmenu03-1">
+                    <li class="leftmenu03-1-item">更多 YOUTUBE 功能</li>
+                </ul>
+
+                <ul class="leftmenu03">
+                    <li class="leftmenu03-item"><a href="#"><i class="fa-brands fa-youtube"></i>YouTube Premium</a></li>
+                    <li class="leftmenu03-item"><a href="#"><i class="fa-solid fa-rss"></i>直播</a></li>
+                    <li class="leftmenu03-item"><a href="#"><i class="fa-solid fa-gear"></i>設定</a></li>
+                    <li class="leftmenu03-item"><a href="#"><i class="fa-regular fa-flag"></i>檢舉紀錄</a></li>
+                    <li class="leftmenu03-item"><a href="#"><i class="fa-regular fa-circle-question"></i>說明</a></li>
+                    <li class="leftmenu03-item"><a href="#"><i class="fa-solid fa-circle-exclamation"></i>提供意見</a></li>
+                </ul>
+            </table>
+
+            <!-- 第四區塊 小項目點選連結 -->
+            <table class="leftmenu04">
+                <ul>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">簡介</a></li>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">媒體</a></li>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">版權</a></li>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">與我們聯絡</a></li>
+                    <br>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">創作者</a></li>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">廣告</a></li>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">開發人員</a></li>
+                    <br>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">條款</a></li>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">隱私權</a></li>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">政策與安全性</a></li>
+                    <br>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">YouTube 運作方式</a></li>
+                    <li class="leftmenu04-item"><a href="#"><img src="" alt="" title="">測試新功能</a></li>
+                </ul>
+            </table>
+
+            <!-- footer / copyright 結尾 / 版權 -->
+            <table>
+                <div id="footer">
+                    <div class="copyright">© 2022 Google LLC</div>
+                </div>
+            </table>
+
+
+        </div>
+    </div>
+
+    <!-- 影片種類區 03 ------------------------------------------------------------------- -->
+    <div id="type_of_video">
+        <ul>
+            <li><a href="#">全部</a></li>
+            <li><a href="#">合輯</a></li>
+            <li><a href="#">音樂</a></li>
+            <li><a href="#">直播中</a></li>
+            <li><a href="#">動畫</a></li>
+            <li><a href="#">觀光</a></li>
+            <li><a href="#">烹飪</a></li>
+            <li><a href="#">寵物</a></li>
+            <li><a href="#">遊戲</a></li>
+            <li><a href="#">最新上傳</a></li>
+        </ul>
+    </div>
+
+
+    <!-- 影片區------------------------------------------------------------------- -->
+    <div id="video_area" class="style2">
+        <div class="container">
+
+            <!-- 第一橫排 四個卡片 一組  (把每個區塊做成卡片-1橫排4個) -->
+            <div class="row">
+
+                <!-- 第一個卡片 -->
+                <div class="col">
+                    <div class="card" id="c1">
+                        <!-- **無法讓整張卡片可點選到影片連結，裡面一定要有包物件 (大圖 & h3) -->
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=gl9vmdmMJN0">
+                                <img src="./images/AstroBunny2.jpg" alt="AstroBunny2">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCiuMb0mv6XtwQjQQ95LnJHw">
+                                <img src="./images/AstroBunny.jpg" alt="AstroBunny">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=gl9vmdmMJN0">
+                                <h3>原子邦妮 Astro Bunny【在名為未來的波浪裡】Official...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCiuMb0mv6XtwQjQQ95LnJHw">原子邦妮 Astro
+                                    Bunny</a><br>觀看次數: 187萬次．1年前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第二個卡片 -->
+                <div class="col">
+                    <div class="card" id="c2">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=GDLM8XANgng">
+                                <img src="./images/Galaxy Version.jpg" alt="Galaxy Version">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCZn0sWyHi1OVNfug5l4G3BQ">
+                                <img src="./images/Bestards.jpg">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=GDLM8XANgng">
+                                <h3>理想混蛋 Bestards【行星 - Galaxy Version】Official M/V</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCZn0sWyHi1OVNfug5l4G3BQ">理想混蛋
+                                    Bestards</a><br>觀看次數: 150萬次 ．1年前</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第三個卡片 -->
+                <div class="col">
+                    <div class="card" id="c3">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=c9PEYJdwdwI">
+                                <img src="./images/sddefault.jpg">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/c/%E6%BB%85%E7%81%AB%E5%99%A8FireEX">
+                                <img src="./images/Fire EX.jpg" alt="Fire EX">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=c9PEYJdwdwI">
+                                <h3>滅火器 Fire EX. - 長途夜車 Southbound Night Bus Ly...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/c/%E6%BB%85%E7%81%AB%E5%99%A8FireEX">滅火器 Fire
+                                    EX.</a><br>觀看次數: 1673萬次．5年前</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第四個卡片 -->
+                <div class="col">
+                    <div class="card" id="c4">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=KlBWlrLTjSU">
+                                <img src="./images/maxresdefault (4).jpg">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCpVm7bg6pXKo1Pr6k5kxG9A">
+                                <img src="./images/National Geographic.jpg" alt="National Geographic">
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=KlBWlrLTjSU">
+                                <h3>🔴 Relaxing Earth Moods Livestream: Music for Sleep...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCpVm7bg6pXKo1Pr6k5kxG9A">National
+                                    Geographic</a><br>觀看次數: 2.6萬次．3天前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第五個卡片 -->
+                <div class="col">
+                    <div class="card" id="c5">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=X3YLyNIb5yg">
+                                <img src="./images/Harry Gregson-Williams - We Are Ice Bears.jpg"
+                                    alt="Harry Gregson-Williams - We Are Ice Bears">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/user/DisneyMusicVEVO/videos">
+                                <img src="./images/DisneyMusicVEVO.jpg" alt="DisneyMusicVEVO">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=X3YLyNIb5yg">
+                                <h3>Harry Gregson-Williams - We Are Ice Bears (From "Disn...</h3>
+                            </a>
+
+                            <p><a
+                                    href="https://www.youtube.com/user/DisneyMusicVEVO/videos">DisneyMusicVEVO</a><br>觀看次數：8824次
+                                1天前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第六個卡片 -->
+                <div class="col">
+                    <div class="card" id="c6">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=nL_VoX0ZR0E">
+                                <img src="./images/Cosmos People.jpg" alt="Ocean">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UC7ovu6a8ydIbDy0fAKmoZ9A">
+                                <img src="./images/BinMusic.jpg" alt="BinMusic">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=nL_VoX0ZR0E">
+                                <h3>Cosmos People 宇宙人 [ 藍色的你 Ocean ] Official Music Vi...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UC7ovu6a8ydIbDy0fAKmoZ9A">相信音樂BinMusic</a> <br>
+                                觀看次數: 109萬次．3個月前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第七個卡片 -->
+                <div class="col">
+                    <div class="card" id="c7">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a
+                                href="https://www.youtube.com/watch?v=11W7TEGxECE&ab_channel=%E7%9B%B8%E4%BF%A1%E9%9F%B3%E6%A8%82BinMusic">
+                                <img src="./images/hqdefault.jpg" alt="Accusefive">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UC7ovu6a8ydIbDy0fAKmoZ9A">
+                                <img src="./images/BinMusic.jpg" alt="BinMusic">
+                            </a>
+
+                            <a
+                                href="https://www.youtube.com/watch?v=11W7TEGxECE&ab_channel=%E7%9B%B8%E4%BF%A1%E9%9F%B3%E6%A8%82BinMusic">
+                                <h3>告五人 Accusefive [ 與海無關 Beyond The Sea ] Official Mu...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UC7ovu6a8ydIbDy0fAKmoZ9A">相信音樂BinMusic</a> <br>
+                                觀看次數: 235萬次．1年前 </p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- 第八個卡片 -->
+                <div class="col">
+                    <div class="card" id="c8">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=ixGJjrFazZE">
+                                <img src="./images/D1.jpg" alt="D1">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCh6W56WImt2RvXYYjdpuVGQ">
+                                <img src="./images/cc.jpg" alt="cc">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=ixGJjrFazZE">
+                                <h3>淡蘭古道中段D1 🏕 野營溪邊、沁涼溪水、漫步在百年的歷...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCh6W56WImt2RvXYYjdpuVGQ">柯式野生活</a> <br> 觀看次數:
+                                12萬次．9個月前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第九個卡片 -->
+                <div class="col">
+                    <div class="card" id="c9">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=ZYjCi4rpAiQ">
+                                <img src="./images/Mr & Mrs Gao2.jpg" alt="Mr & Mrs Gao2">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCMUnInmOkrWN4gof9KlhNmQ">
+                                <img src="./images/Mr & Mrs Gao.jpg" alt="Mr & Mrs Gao">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=ZYjCi4rpAiQ">
+                                <h3>碰到就玩完了，世界上最可怕的十大海洋生物 | 老高與小茉 ...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCMUnInmOkrWN4gof9KlhNmQ">老高與小茉 Mr & Mrs
+                                    Gao</a><br>觀看次數: 547萬次．10個月前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第十個卡片 -->
+                <div class="col">
+                    <div class="card" id="c10">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a
+                                href="https://www.youtube.com/watch?v=5XR7naZ_zZA&list=PLnpmuX7NeP2PQO2AHdGGAlSODEK9Y26M3&index=26">
+                                <img src="./images/Galantis - Runaway.jpg" alt="Galantis - Runaway">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UC0YlhwQabxkHb2nfRTzsTTA">
+                                <img src="./images/Galantis.jpg" alt="Galantis">
+                            </a>
+
+                            <a
+                                href="https://www.youtube.com/watch?v=5XR7naZ_zZA&list=PLnpmuX7NeP2PQO2AHdGGAlSODEK9Y26M3&index=26">
+                                <h3>Galantis - Runaway (U & I) (Official Video)</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UC0YlhwQabxkHb2nfRTzsTTA">Galantis</a><br>觀看次數:
+                                3.9億次．7年前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第十一個卡片 -->
+                <div class="col">
+                    <div class="card" id="c11">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=gu2KAtIgtO4">
+                                <img src="./images/Relaxing Guitar Music.jpg" alt="Relaxing Guitar Music">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCemEswmv8d_yxHGqm4wZQ0A">
+                                <img src="./images/Relaxing Guitar Music2.jpg" alt="Relaxing Guitar Music2">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=gu2KAtIgtO4">
+                                <h3>Relaxing Guitar Music & Butterfly Flowers, Stress Rel...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCemEswmv8d_yxHGqm4wZQ0A">Relaxing Guitar
+                                    Music</a><br>觀看次數: 187萬次．1年前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第十二個卡片 -->
+                <div class="col">
+                    <div class="card" id="c12">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=EdfSzouoV-g">
+                                <img src="./images/Oka.jpg" alt="Oka">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCMupobPimcHFHNA9hCXQlbA">
+                                <img src="./images/Oka the Shiba Inu.jpg" alt="Oka the Shiba Inu">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=EdfSzouoV-g">
+                                <h3>兩隻柴犬吵架，接下來這一幕，讓主人笑了</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCMupobPimcHFHNA9hCXQlbA">Oka the Shiba Inu
+                                    柴犬Oka</a> <br> 觀看次數: 274萬次．7個月前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第十三個卡片 -->
+                <div class="col">
+                    <div class="card" id="c9">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=BlblBvpVgjE&list=RDMM&start_radio=1">
+                                <img src="./images/Hello Nico.jpg" alt="Hello Nico">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UC7MMGaCyQGmuIWq8zvpHkgQ">
+                                <img src="./images/unnamed00jpg.jpg" alt="Hello Nico2">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=BlblBvpVgjE&list=RDMM&start_radio=1">
+                                <h3>Hello Nico〈花〉MV</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UC7MMGaCyQGmuIWq8zvpHkgQ">黑市音樂</a><br>觀看次數:
+                                1187萬次．7年前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第十四個卡片 -->
+                <div class="col">
+                    <div class="card" id="c10">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=wDWr0CLQy0s">
+                                <img src="./images/yam2.jpg" alt="yam2">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCw2W7GIqJNB-UMUxncnMuiw">
+                                <img src="./images/yam.jpg" yam="">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=wDWr0CLQy0s">
+                                <h3>【黃阿瑪的後宮生活】打造巨大貓砂遊樂園！反應都超奇...</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCw2W7GIqJNB-UMUxncnMuiw">黃阿瑪的後宮生活
+                                </a><br>觀看次數:15萬次．20小時前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第十五個卡片 -->
+                <div class="col">
+                    <div class="card" id="c11">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=TPv64Y56I_4">
+                                <img src="./images/Alessia Cara - Best Days.jpg" alt="Alessia Cara - Best Days">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCSZBmDk4v3ozB3kfB2oyUEA">
+                                <img src="./images/Alessia Cara.jpg" alt="Alessia Cara">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=TPv64Y56I_4">
+                                <h3>Alessia Cara - Best Days</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCSZBmDk4v3ozB3kfB2oyUEA">Alessia
+                                    Cara</a><br>觀看次數: 400萬次．6個月前 </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 第十六個卡片 -->
+                <div class="col">
+                    <div class="card" id="c12">
+
+                        <!-- card-header - 大圖片  -->
+                        <div class="card-header">
+                            <a href="https://www.youtube.com/watch?v=0LHmevWVvpc">
+                                <img src="./images/I Wanna Grow Old With You - Westlife.jpg"
+                                    alt="I Wanna Grow Old With You - Westlife">
+                            </a>
+                        </div>
+
+                        <!-- card-body - 小圖片+文字 -->
+                        <div class="card-body">
+                            <a href="https://www.youtube.com/channel/UCQ66z_au9-ufIbybuqexxKw">
+                                <img src="./images/Ένα.jpg" alt="Ένα">
+                            </a>
+
+                            <a href="https://www.youtube.com/watch?v=0LHmevWVvpc">
+                                <h3>I Wanna Grow Old With You - Westlife</h3>
+                            </a>
+
+                            <p><a href="https://www.youtube.com/channel/UCQ66z_au9-ufIbybuqexxKw">Ένας
+                                    αγέρας</a><br>觀看次數：1.2億次
+                                4 年前 </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
